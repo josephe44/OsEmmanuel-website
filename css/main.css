@@ -30,6 +30,7 @@ a {
   width: 100%;
   position: fixed;
   background-color: #ffff;
+  z-index: 1000;
 }
 
 .navbar {
@@ -92,14 +93,16 @@ a {
   text-align: center;
 }
 .hero-section {
-  margin-top: 20rem;
+  margin-top: 22rem;
+  margin-bottom: 10rem;
 }
 .hero-section h1 {
   font-size: 4rem;
+  line-height: 1.7;
 }
 .hero-section p {
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 400;
   color: #c6c6c6;
   line-height: 1.4;
 }
@@ -109,8 +112,9 @@ a {
 .hero-section a {
   display: inline-block;
   text-decoration: none;
+  font-size: 2.5rem;
   border: 1px solid #482ff7;
-  padding: 12px 25px;
+  padding: 15px 32px;
   margin-top: 2rem;
   font-size: 1.5rem;
   border-radius: 0.5rem 0 0.5rem 0;
@@ -134,8 +138,40 @@ a {
   align-items: center;
   margin: 10rem 2rem 0 2rem;
 }
+.project {
+  position: relative;
+}
 .project img {
   width: 100%;
+  border-radius: 1rem;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: rgb(0, 0, 0, 0.1);
+}
+
+.project:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 @media only screen and (max-width: 768px) {
@@ -152,7 +188,7 @@ a {
   .nav-menu {
     position: fixed;
     left: -100%;
-    top: 0;
+    top: 5rem;
     flex-direction: column;
     background-color: #fff;
     width: 100%;
@@ -162,6 +198,7 @@ a {
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
   }
 
   .nav-menu.active {
@@ -198,6 +235,7 @@ a {
   }
   .hero-section {
     margin-top: 13rem;
+    margin-bottom: 0;
   }
   /* styling the project section */
   .grid {
