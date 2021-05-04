@@ -1,0 +1,35 @@
+.about {
+  display: grid;
+  text-align: center;
+}
+.about .grid {
+  gap: 0;
+  margin: 14rem 2rem 0 2rem;
+}
+.about-img {
+  margin: 0 1rem;
+  width: 100%;
+  /* background-color: #fff; */
+}
+figure img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.about-text {
+  margin: 0 1rem;
+}
+
+.about-text h1 {
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 1.7;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+.about-text p {
+  color: rgb(0, 0, 0, 0.5);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: justify;
+  margin: 0 3rem;
+}
