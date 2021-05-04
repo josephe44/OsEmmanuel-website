@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+/* styling the navbar section */
+.header {
+  margin-top: 4rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+.menu {
+  width: 100%;
+  position: fixed;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+}
+
+.nav-link {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #c6c6c6;
+}
+
+.nav-link.active {
+  color: #383872;
+}
+.nav-link:hover {
+  color: #383872;
+  /* color: #482ff7; */
+}
+
+.nav-logo {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #482ff7;
+}
+/* end of styling navbar section */
+
+/* styling the hero section */
+.hero-container {
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.hero-section {
+  margin-top: 20rem;
+}
+.hero-section h1 {
+  font-size: 4rem;
+}
+.hero-section p {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #c6c6c6;
+  line-height: 1.4;
+}
+.hero-section p > span {
+  color: #482ff7;
+}
+.hero-section a {
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #482ff7;
+  padding: 12px 25px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0 0.5rem 0;
+}
+.hero-section a:hover {
+  background-color: #482ff7;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* styling of the project section */
+.project-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 2rem 0 2rem;
+}
+.project img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    background-color: #ffff;
+  }
+  .header {
+    margin-top: 1.5rem;
+  }
+  .navbar {
+    justify-content: space-between;
+    margin: 0 3rem;
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding-top: 5rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2.5rem 0;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  /* styling hero section */
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .hero-section p {
+    font-size: 2.5rem;
+  }
+  .hero-section {
+    margin-top: 10rem;
+  }
+  /* styling the project section */
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  .project img {
+    width: 100%;
+  }
+}
