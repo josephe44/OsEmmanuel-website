@@ -29,6 +29,7 @@ a {
 .menu {
   width: 100%;
   position: fixed;
+  background-color: #ffff;
 }
 
 .navbar {
@@ -196,7 +197,7 @@ a {
     margin: 0 1rem;
   }
   .hero-section {
-    margin-top: 10rem;
+    margin-top: 13rem;
   }
   /* styling the project section */
   .grid {
