@@ -200,7 +200,7 @@ a {
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    box-shadow: 1px 3px rgb(198, 198, 198, 0.3);
     z-index: 1000;
   }
 
